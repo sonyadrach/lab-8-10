@@ -1,0 +1,71 @@
+.train-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.train-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.train-card:hover {
+  transform: scale(1.03);
+}
+
+.train-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.book-button {
+  margin-top: 10px;
+  background-color: #cc7ef3;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #2d0a3a;
+}
+.coupe-block {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #4d4c5a;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.coupe-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 4px 0;
+}
+
+.top .seat {
+  background-color: #57a4f1; /* верхні полиці */
+}
+
+.bottom .seat {
+  background-color: #1a364a; /* нижні полиці */
+}
+
+.seat {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
