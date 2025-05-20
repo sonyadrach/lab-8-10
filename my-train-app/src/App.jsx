@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <h1>Система бронювання квитків</h1>
+        <header className="app-header">Система бронювання квитків</header>
         <Routes>
           <Route path="/" element={<TrainList trains={trains} />} />
           <Route path="/book/:trainId" element={<BookingForm />} />
