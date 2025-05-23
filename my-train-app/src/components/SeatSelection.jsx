@@ -1,33 +1,37 @@
 import React from 'react';
-
-
-const SeatSelection = ({ coach, selectedSeats, onSelectSeat, trainType, train}) => {
+const SeatSelection = ({ coach, selectedSeats, onSelectSeat, trainType, bookedSeats}) => {
   const isCoupe = trainType === "Купейний";
-
+  
   const renderSeats = () => {
-    const totalSeats = coach.seats;
-    const seats = [];
+  const totalSeats = coach.seats;
+  const seats = [];
+  for (let i = 0; i < totalSeats; i++) {
+    const seatNumber = i + 1;
+    const seatId = `${coach.coachId}-${seatNumber}`;
+    const isSelected = selectedSeats.includes(seatId);
 
-    for (let i = 0; i < totalSeats; i++) {
-      const seatNumber = i + 1;
-      const seatId = `${coach.coachId}-${seatNumber}`;
-      const isSelected = selectedSeats.includes(seatId);
-
-      seats.push(
-        <button
-          key={seatNumber}
-          className={`seat ${isSelected ? 'selected' : 'available'}`}
-          onClick={() => onSelectSeat(seatId)}
-        >
-          {seatNumber}
-        </button>
-      );
-    }
-
+    seats.push(
+      <button
+        key={seatNumber}
+        className={
+          bookedSeats.includes(seatId)
+            ? 'seat booked'
+            : isSelected
+            ? 'seat selected'
+            : 'seat available'
+        }
+        onClick={() => {
+          if (!bookedSeats.includes(seatId)) onSelectSeat(seatId);
+        }}
+        disabled={bookedSeats.includes(seatId)}
+      >
+        {seatNumber}
+      </button>
+    );
+  }
     if (isCoupe) {
-      // 36 місць => 9 купе по 4 місця
       const coupeBlocks = [];
-      for (let i = 0; i < 28; i += 4) {
+      for (let i = 0; i < 24; i += 4) {
         coupeBlocks.push(
           <div key={i} className="coupe-block">
             <div className="coupe-row top ">
