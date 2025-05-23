@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SeatSelection = ({ coach, selectedSeats, onSelectSeat, trainType }) => {
+
+const SeatSelection = ({ coach, selectedSeats, onSelectSeat, trainType, train}) => {
   const isCoupe = trainType === "Купейний";
 
   const renderSeats = () => {

@@ -15,7 +15,7 @@ const trains = [
   {
     id: 2,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%D0%92%D0%BE%D0%B3%D0%BD%D1%96_%D0%BD%D1%96%D1%87%D0%BD%D0%BE%D1%97_%D0%B3%D1%80%D0%B5%D0%B1%D0%BB%D1%96.jpg/1920px-%D0%92%D0%BE%D0%B3%D0%BD%D1%96_%D0%BD%D1%96%D1%87%D0%BD%D0%BE%D1%97_%D0%B3%D1%80%D0%B5%D0%B1%D0%BB%D1%96.jpg",
-    name: "Нічний експрес (Ужгород - Запоріжжя",
+    name: "Нічний експрес (Ужгород - Запоріжжя)",
     description: "Потяг з нічним курсом та спальними вагонами.",
     type: "Купейний",
     departureTime: "2025-05-24T13:28",

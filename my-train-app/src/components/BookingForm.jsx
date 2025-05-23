@@ -28,15 +28,25 @@ const BookingForm = () => {
     alert("Місця успішно заброньовано!");
   };
 
+  if (!train) {
+    return <p>Поїзд не знайдено</p>;
+  }
+
   return (
-    <div className="booking-form">
-      <h2>{train.name}</h2>
-      <p>{train.description}</p>
-      <p><strong>Тип поїзда:</strong> {train.type}</p>
-      <p>
-        <strong>Відправлення:</strong> {new Date(train.departureTime).toLocaleString()} <br />
-        <strong>Прибуття:</strong> {new Date(train.arrivalTime).toLocaleString()}
-      </p>
+    <div>
+      <div className="train-info-strip">
+        <div className="strips">
+          <div className="strip dpurple"></div>
+          <div className="strip purple"></div>
+          <div className="strip pink"></div>
+        </div>
+        <div className="train-details">
+          <h3>{train.name}</h3>
+          <p>Тип поїзда: <strong>{train.type}</strong></p>
+          <p>Відправлення: <strong>{new Date(train.departureTime).toLocaleString()}</strong></p>
+          <p>Прибуття: <strong>{new Date(train.arrivalTime).toLocaleString()}</strong></p>
+        </div>
+      </div>
 
       {train.coaches.map(coach => (
         <SeatSelection
@@ -45,6 +55,7 @@ const BookingForm = () => {
           selectedSeats={selectedSeats}
           onSelectSeat={toggleSeat}
           trainType={train.type}
+          train={train}
         />
       ))}
 
