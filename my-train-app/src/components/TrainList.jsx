@@ -49,9 +49,7 @@ const TrainList = ({ trains }) => {
       <p style={{ marginTop: '20px' }}>Немає поїздів за вибраними фільтрами.</p>
     )}
   </div>
-</div>
-
-  );
+</div>);
 };
 
 export default TrainList;

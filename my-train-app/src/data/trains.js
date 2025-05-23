@@ -8,8 +8,8 @@ const trains = [
     departureTime: "2025-05-25T08:00",
     arrivalTime: "2025-05-26T14:00",
     coaches: [
-      { coachId: "A", seats: 20 },
-      { coachId: "B", seats: 20 }
+      { coachId: "A", seats: 54 },
+      { coachId: "B", seats: 54 }
     ]
   },
   {
@@ -21,8 +21,8 @@ const trains = [
     departureTime: "2025-05-24T13:28",
     arrivalTime: "2025-05-25T10:17",
     coaches: [
-      { coachId: "C", seats: 15 },
-      { coachId: "D", seats: 15 }
+      { coachId: "C", seats: 28 },
+      { coachId: "D", seats: 28 }
     ]
   },
   {
@@ -34,8 +34,8 @@ const trains = [
     departureTime: "2025-05-24T15:30",
     arrivalTime: "2025-05-25T05:56",
     coaches: [
-      { coachId: "E", seats: 15 },
-      { coachId: "F", seats: 15 }
+      { coachId: "E", seats: 36 },
+      { coachId: "F", seats: 36 }
     ]
   },
   {
@@ -47,8 +47,8 @@ const trains = [
     departureTime: "2025-05-23T14:04",
     arrivalTime: "2025-05-23T20:28",
     coaches: [
-      { coachId: "G", seats: 25 },
-      { coachId: "H", seats: 25 }
+      { coachId: "G", seats: 54 },
+      { coachId: "H", seats: 54 }
     ]
   },
    {
@@ -60,8 +60,8 @@ const trains = [
     departureTime: "2025-05-27T21:50",
     arrivalTime: "2025-05-28T09:19",
     coaches: [
-      { coachId: "G", seats: 25 },
-      { coachId: "H", seats: 25 }
+      { coachId: "G", seats: 28 },
+      { coachId: "H", seats: 28 }
     ]
   },
   {
@@ -73,8 +73,8 @@ const trains = [
     departureTime: "2025-05-27T06:28",
     arrivalTime: "2025-05-27T09:07",
     coaches: [
-      { coachId: "G", seats: 25 },
-      { coachId: "H", seats: 25 }
+      { coachId: "G", seats: 28 },
+      { coachId: "H", seats: 28 }
     ]
   },
 ];

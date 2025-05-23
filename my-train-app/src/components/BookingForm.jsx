@@ -44,7 +44,7 @@ const BookingForm = () => {
           coach={coach}
           selectedSeats={selectedSeats}
           onSelectSeat={toggleSeat}
-          type={train.type}
+          trainType={train.type}
         />
       ))}
 
